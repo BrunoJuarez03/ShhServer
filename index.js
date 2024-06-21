@@ -6,9 +6,9 @@ const cors = require('cors')
 
 app.use(cors());
 
-const Port = 3001;
+const Port = process.env.PORT || 3001;
 
-const ip = process.env.PORT || "localhost";
+const ip = process.env.HOST || "localhost";
 
 const server = http.createServer(app);
 
