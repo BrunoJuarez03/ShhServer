@@ -8,6 +8,8 @@ app.use(cors());
 
 const Port = process.env.PORT || 3001;
 
+const ip = process.env.IP || "localhost";
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -26,6 +28,6 @@ io.on("connection", (socket)=>{
     })
 })
 
-server.listen(Port, ()=>{
+server.listen(Port, ip,()=>{
     console.log("server is running.")
 });
