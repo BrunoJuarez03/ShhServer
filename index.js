@@ -28,5 +28,5 @@ io.on("connection", (socket)=>{
 })
 
 server.listen(Port, ()=>{
-    console.log("server is running.")
+    console.log("server is running on port: " + Port)
 });
