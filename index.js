@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin:'http://localhost:3000',
+        origin:'http://localhost:3000','https://sprightly-seahorse-75fe0c.netlify.app/'
     }
 })
 
@@ -30,3 +30,5 @@ io.on("connection", (socket)=>{
 server.listen(Port, ()=>{
     console.log("server is running.")
 });
+
+//https://shhserver.onrender.com
